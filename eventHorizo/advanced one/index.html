@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventHorizon</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <header class="app-header">
+
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to dark mode"
+      title="Toggle theme"
+    >
+      <span aria-hidden="true" id="themeToggleIcon">🌙</span>
+    </button>
+
+    <h1>EventHorizon</h1>
+    <p>Keep track of everything on your calendar</p>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="form-section">
+
+      <h2 id="formTitle">Add New Event</h2>
+
+      <form id="eventForm">
+
+        <input
+          type="text"
+          id="eventTitle"
+          placeholder="Event title"
+          required
+          maxlength="50"
+        >
+
+        <input
+          type="date"
+          id="eventDate"
+          required
+        >
+
+        <select id="eventCategory">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="social">Social</option>
+          <option value="other">Other</option>
+        </select>
+
+        <input
+          type="text"
+          id="eventLocation"
+          placeholder="Location"
+          required
+          maxlength="50"
+        >
+
+        <button type="submit" id="submitButton">
+          Add Event
+        </button>
+
+      </form>
+
+      <p id="formMessage" class="message"></p>
+
+    </section>
+
+
+    <section class="stats">
+
+      <div class="stat-card">
+        <span class="stat-label">Total</span>
+        <span class="stat-value" id="totalEvents">0</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Upcoming</span>
+        <span class="stat-value" id="upcomingEvents">0</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Attended</span>
+        <span class="stat-value" id="attendedEvents">0</span>
+      </div>
+
+    </section>
+
+
+    <section class="filter-section">
+
+      <div class="filter-group">
+
+        <span class="filter-label">Status</span>
+
+        <button
+          class="filter-btn status-filter-btn active"
+          data-status-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn status-filter-btn"
+          data-status-filter="upcoming"
+        >
+          Upcoming
+        </button>
+
+        <button
+          class="filter-btn status-filter-btn"
+          data-status-filter="today"
+        >
+          Today
+        </button>
+
+        <button
+          class="filter-btn status-filter-btn"
+          data-status-filter="past"
+        >
+          Past
+        </button>
+
+      </div>
+
+
+      <div class="filter-group">
+
+        <span class="filter-label">Category</span>
+
+        <button
+          class="filter-btn category-filter-btn active"
+          data-category-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn category-filter-btn"
+          data-category-filter="work"
+        >
+          Work
+        </button>
+
+        <button
+          class="filter-btn category-filter-btn"
+          data-category-filter="personal"
+        >
+          Personal
+        </button>
+
+        <button
+          class="filter-btn category-filter-btn"
+          data-category-filter="social"
+        >
+          Social
+        </button>
+
+        <button
+          class="filter-btn category-filter-btn"
+          data-category-filter="other"
+        >
+          Other
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="event-list">
+      <h2>My Events</h2>
+    </section>
+
+  </main>
+
+
+  <script src="index.js"></script>
+
+</body>
+</html>

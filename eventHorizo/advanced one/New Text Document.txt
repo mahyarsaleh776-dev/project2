@@ -1,0 +1,137 @@
+# EventHorizon
+
+EventHorizon is a simple event management web application that I built using HTML, CSS, and JavaScript.
+
+The main idea of the project is to practice JavaScript fundamentals and DOM manipulation by creating a small application that allows the user to manage different events.
+
+## Features
+
+- Add a new event
+- Edit an existing event
+- Delete an event
+- Mark an event as attended
+- Mark an event as cancelled
+- Display the event status:
+  - Upcoming
+  - Today
+  - Past
+- Filter events by status
+- Filter events by category
+- Display event statistics
+- Validate event information before adding or editing
+- Light mode as the default theme
+- Dark mode
+- Responsive design for smaller screens
+- Display a message when no events are found
+
+## Event Information
+
+Each event contains:
+
+- Title
+- Date
+- Category
+- Location
+- Attendance status
+
+The available categories are:
+
+- Work
+- Personal
+- Social
+- Other
+
+## Statistics
+
+The application displays three basic statistics:
+
+- Total events
+- Upcoming events
+- Attended events
+
+These statistics are updated automatically when the events change.
+
+## Filters
+
+Events can be filtered using two types of filters.
+
+### Status
+
+- All
+- Upcoming
+- Today
+- Past
+
+### Category
+
+- All
+- Work
+- Personal
+- Social
+- Other
+
+The two filters can also work together. For example, I can display only upcoming work events.
+
+## Edit Event
+
+The application also includes an edit feature.
+
+When I click the **Edit** button, the selected event information is loaded into the form. I can then change the title, date, category, or location and update the event.
+
+The attendance status is kept when editing an event.
+
+## Theme
+
+The application uses two themes:
+
+- Light mode
+- Dark mode
+
+The default theme is **Light Mode**.
+
+The user can switch between the two modes using the theme button in the header.
+
+The selected theme is stored in `localStorage`, so it remains the same when the page is opened again.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+No frameworks or external libraries are used.
+
+## JavaScript Concepts Practiced
+
+While building this project, I practiced several JavaScript concepts, including:
+
+- Variables using `let` and `const`
+- Arrays
+- Objects
+- Functions
+- `if / else`
+- Loops
+- Template literals
+- DOM manipulation
+- `querySelector`
+- `getElementById`
+- `querySelectorAll`
+- Event listeners
+- Form submission
+- Input validation
+- Array methods
+- `push()`
+- `splice()`
+- `filter()`
+- `localStorage`
+- Working with dates
+
+## Project Structure
+
+```text
+EventHorizon/
+│
+├── index.html
+├── index.css
+├── index.js
+└── README
